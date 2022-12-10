@@ -1,0 +1,26 @@
+{
+  "name": "assignment-student-results-protal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOGESHB11/assignment-student-results-protal.git"
+  },
+  "author": "Yogesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YOGESHB11/assignment-student-results-protal/issues"
+  },
+  "homepage": "https://github.com/YOGESHB11/assignment-student-results-protal#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
