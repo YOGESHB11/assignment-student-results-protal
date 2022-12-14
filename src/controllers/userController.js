@@ -19,6 +19,7 @@ const register = async function (req, res) {
         if (!validator.isValid(name)) {
             return res.status(400).send({ status: false, message: "Please provide a name" })
         }
+        data.name = name.trim()
         if (!validator.isValidEmail(email)) {
             return res.status(400).send({ status: false, message: "Invalid EmailId" })
         }
@@ -55,7 +56,7 @@ const login = async function (req, res) {
                 return res.status(400).send({ status: false, message: `value of ${key} must be present ` })
             }
         }
-
+        
         const user = await userModel.findOne({ email: email })
         if (!user) {
             res.status(400).send({ status: false, message: "Invalid Credentials" })
@@ -65,7 +66,7 @@ const login = async function (req, res) {
             if (result) {
                 let token = jwt.sign(
                     {
-                        userId: user._id.toString(),
+                        userId: user._id.toString()
                     },
                     "secret-key"
                 );

@@ -18,6 +18,7 @@ const createStudent = async function (req, res) {
         if (!validator.isLetters(studentName)) {
             return res.status(400).send({ status: false, message: "Provide a valid name" })
         }
+        data.studentName = studentName.trim()
         if (!validator.isValidSubject(subject)) {
             return res.status(400).send({ status: false, message: "subjects can only be maths,english,physics,chemistry or computers only" })
         }
